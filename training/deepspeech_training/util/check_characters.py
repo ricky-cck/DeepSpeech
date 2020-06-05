@@ -34,7 +34,7 @@ def main():
 
     all_text = set()
     for in_file in in_files:
-        with open(in_file, "r") as csv_file:
+        with open(in_file, "r", encoding="utf-8") as csv_file:
             reader = csv.reader(csv_file)
             try:
                 next(reader, None)  # skip the file header (i.e. "transcript")
